@@ -61,6 +61,12 @@ class checker():
         self.__punctuation_set = set(list(string.punctuation))
         self.__end_punctuation_set = set([".", "?", "!"])
 
+    def reset_abbre_set(self):
+        self.__abbre_set = set(["co.", "ltd.", "inc.", "oo.", "jan.", "feb.", "mar.", "apr.", "jun.", "jul.", "aug", "sept.", "oct", "nov.", "dec.", "mt.", "st.", "etc.", "e.g.", "a.m.", "p.m.", "jr.", "i.e.", "misc.", "i.e.", "fig.", "illus.", "no.", "sr.", "assoc.", "bros.", "corp.", "mtg."])
+
+    def reset_title_set(self):
+        self.__title_set = set(["mr.", "ms.", "mrs.", "dir." "dr.", "ald.", "atty.", "gen.", "insp.", "prof.", "gov.", "pres.", "supt.", "sr.", "fr.", "messrs.", "lt.", "capt.", "col.", "cdr.", "sgt.", "maj."])
+
     def reset_abc_set(self):
         self.__abc_set = set(list(string.ascii_lowercase))
 
@@ -199,6 +205,54 @@ class checker():
         
         if type(word) is str and word in self.__title_set:
             self.__title_set.remove(word)
+            return True
+
+        return False
+
+    def delete_abbre(self, word):
+        word = word.lower()
+
+        if not word.endswith("."):
+            word = word + "."
+        
+        if type(word) is str and word in self.__abbre_set:
+            self.__abbre_set.remove(word)
+            return True
+
+        return False
+
+    def delete_abc(self, word):
+        word = word.lower()
+
+        if type(word) is str and word in self.__abc_set:
+            self.__abc_set.remove(word)
+            return True
+
+        return False
+
+    def delete_vowel(self, word):
+        word = word.lower()
+
+        if type(word) is str and word in self.__vowel_set:
+            self.__vowel_set.remove(word)
+            return True
+
+        return False
+
+    def delete_punctuation(self, word):
+        word = word.lower()
+
+        if type(word) is str and word in self.__punctuation_set:
+            self.__punctuation_set.remove(word)
+            return True
+
+        return False
+
+    def delete_end_punctuation(self, word):
+        word = word.lower()
+
+        if type(word) is str and word in self.__end_punctuation_set:
+            self.__end_punctuation_set.remove(word)
             return True
 
         return False

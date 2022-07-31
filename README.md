@@ -66,3 +66,9 @@ for sentence in sentences:
     print(sentence)
 
 ```
+
+## Customizations
+
+For more information about customizations, please check the wiki:
+
+https://github.com/Rairye/sentence-tk-checker/wiki/Customization

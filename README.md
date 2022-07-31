@@ -67,7 +67,7 @@ for sentence in sentences:
 
 ```
 
-## Customizations
+## Customization
 
 For more information about customizations, please check the wiki:
 

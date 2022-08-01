@@ -1,13 +1,14 @@
 # sentence-tk-checker
 Checks output of an English sentence tokenizer and modifies the output according to default or user-defined rules.
 
+## Why use this package?
+
 This package can be useful if you are unable to modify your current English sentence tokenizer. (Unable to change parameters, retrain the tokenizer, etc.)
 
 There are two primary ways of checking the results of the tokenizer.
 
 1. Passing tokenized sentences to the class instance directly
 2. Assigning the tokenizer’s tokenization function to the class instance
-
 
 ## Passing tokenized sentences to the class instance directly
 ```python

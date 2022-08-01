@@ -5,7 +5,17 @@ Checks output of an English sentence tokenizer and modifies the output according
 
 This package can be useful if you are unable to modify your current English sentence tokenizer. (Unable to change parameters, retrain the tokenizer, etc.)
 
-There are two primary ways of checking the results of the tokenizer.
+
+### Novel abbreviation detection
+
+The package includes a function for detecting possible novel abbreviations. (Enabled by default. For more information, see https://github.com/Rairye/sentence-tk-checker/wiki/Customization)
+
+### User settings
+
+Users can customize: abbreviations, titles, abc characters, vowel characters, puntuation characters, and sentence-end punctuation characters. (For more information, see https://github.com/Rairye/sentence-tk-checker/wiki/Customization)
+
+
+There are two primary ways of checking the results of the tokenizer that you are using.
 
 1. Passing tokenized sentences to the class instance directly
 2. Assigning the tokenizer’s tokenization function to the class instance
@@ -73,3 +83,7 @@ for sentence in sentences:
 For more information about customizations, please check the wiki:
 
 https://github.com/Rairye/sentence-tk-checker/wiki/Customization
+
+## Note 
+
+This package is optimized for English and has not been tested with other languages.

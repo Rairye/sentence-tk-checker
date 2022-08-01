@@ -14,6 +14,9 @@ The package includes a function for detecting possible novel abbreviations. (Ena
 
 Users can customize: abbreviations, titles, abc characters, vowel characters, puntuation characters, and sentence-end punctuation characters. (For more information, see https://github.com/Rairye/sentence-tk-checker/wiki/Customization)
 
+### Fragment detection
+
+Detects possible sentence fragments.
 
 There are two primary ways of checking the results of the tokenizer that you are using.
 
@@ -84,6 +87,11 @@ For more information about customizations, please check the wiki:
 
 https://github.com/Rairye/sentence-tk-checker/wiki/Customization
 
-## Note 
+## Computational Complexity
 
-This package is optimized for English and has not been tested with other languages.
+The checker does not check the entires contents of every sentence returned by the tokenizer. Rather, it is inspects the boundaries of the sentences and join certain sentences (possible sentence fragments) together.
+
+## Notes 
+
+1. This package is optimized for English and has not been tested with other languages.
+2. This package assumes that proper punctuation is used in the text.
